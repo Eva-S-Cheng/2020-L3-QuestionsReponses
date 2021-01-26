@@ -1,0 +1,105 @@
+Question :
+	3 types de questions :
+		- QCM
+		- VF
+		- RC
+
+	3 niveaux de difficultés :
+		- Facile
+		- Moyen 
+		- Dur
+
+Question :
+- Texte 
+- Numéro (indépendant du thème, à chaque fois qu'une question est créée nouveau numéro)
+- Thème 
+- Difficulté
+- Réponse <T>
+- Type String
+
+- Constructeur :
+	- Texte 
+	- Numéro (indépendant du thème, à chaque fois qu'une question est créée nouveau numéro voir tp voiture)
+	- Thème (vérif)
+	- Difficulté (vérifier si compris entre 1 et 3, si pas le cas redemander de saisir, main ou constr)
+
+- Afficher, niveau et énoncé
+
+- Saisir(String a) :
+	Vérifie si = QCM, VF ou RC
+	Type = a;
+	si (String.equals(QCM)) => la réponse c'est un entier (1, 2, 3)
+		Saisie de la réponse (en entier avec catch exception)		
+	si (String.equals(VF)) => Booléen (vrai / faux)
+		Saisie de V ou F => conversion en booléen, exception
+	si (String.equals(RC)) => Réponse string
+		Saisie de la réponse attendue => réponse 
+	(Appel de réponse(...))
+
+- Réponse (élément T) :
+	this.réponse = T;
+
+
+----------------------------------------------------------------
+Thèmes :
+- Indicateur =-1  
+- Taille ?
+- Tableau de ThemeQuestion qui contient les theme (new tableau de string de taille 10)
+
+- Initialisateur [Tableau de theme question qui stocke 
+- modifier theme ancien theme et nouveau
+- sélectionner theme (comme rentre un string, compare avec Themes.ThemeQuestions.String) => stocké dans indicateur verif si != Indicateur => tu mets sinon redemander
+- 5 thèmes => vérif tous différent (0 et 9) if etc
+
+-------------------------------------------------------------------
+ThemeQuestion :
+- String 
+- Liste de question (3 arraylist)
+
+- Constructeur (Nom): nom et New liste de questions <-
+
+-----------------------------------------------------
+Liste questions :
+- liste de facile
+- liste de moyen
+- liste de difficile
+
+
+- Constructeur () : new arraylist blabla
+- Afficher 
+- Ajouter simple
+- Supprimer
+- Sélectionner question (phase 1 politique Round Robin, phase 2 questions (prendre un entier)) => retourne une question
+
+Dans le main : Aux thèmes -> à 1 thème (ThemeQuestion) -> liste des questions -> l'arraylist qui contient les questions
+
+-------------------------------------------------------
+Phase :
+- Int contient le numéro de la phase
+- Joueurs actifs de la phase (sélectionner...)
+- Tableau qui contient les questions choisie pour chaque joueur appeler la fonction sélectionner 
+- Sélection des joueurs
+- PhaseDeJeu => set
+- Implémenter le tableay des questions pour les phases
+
+--------------------------------------------------------
+Joueurs :
+- Numéro
+- Nom
+- Score
+- Etat
+
+- Constructeur
+- Saisir réponse du joueur à la question
+- Afficher simple
+- MAJScore => prendre en compte les phases, booléen il a gagné ou perdu
+- ChangerEtat => int 1 pour sélectionné, 2 gagnant, 3 super gagnant, 4 éliminé, 5 en attente
+
+--------------------------------------------------------
+EnsJoueurs :
+- ArrayList de joueurs
+
+- Constructeur ArrayList
+- Creer
+- Afficher
+- Sélectionner
